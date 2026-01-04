@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تطبيق IPTV</string>
+
+    <string name="welcome_name">مرحباً،\n%s</string>
+
+    <string name="tv_guide">دليل التلفاز</string>
+    <string name="movies">الأفلام</string>
+    <string name="my_bill">فواتيري</string>
+    <string name="messages">الرسائل</string>
+    <string name="settings">الإعدادات</string>
+    <string name="cast">بث الشاشة</string>
+
+    <string name="room_service">خدمة الغرف</string>
+    <string name="hotel_info">معلومات الفندق</string>
+    <string name="concierge">الكونسيرج</string>
+    <string name="spa">السبا والاستجمام</string>
+    <string name="weather">الطقس</string>
+    <string name="radio">الراديو</string>
+
+    <string name="save">حفظ</string>
+    <string name="title_room_service">خدمة الغرف</string>
+    <string name="subtitle_select_service">اختر خدمة</string>
+    <string name="label_breakfast">إفطار في الغرفة</string>
+    <string name="label_dining">طعام في الغرفة</string>
+    <string name="label_beverages">مشروبات في الغرفة</string>
+    <string name="label_housekeeping">خدمة التنظيف</string>
+    <string name="label_cart">عربتي (0)</string>
+    <string name="label_call">اتصل للطلب</string>
+    <string name="nav_hint">استخدم مفاتيح الأسهم للتنقل، OK للاختيار</string>
+    <string name="app_logo_text">EMS</string>
+    <string name="welcome_placeholder">أهلاً بك،\n%s</string>
+    <string name="hotel_ad_label">إعلان الفندق</string>
+    <string name="title_hotel_info">معلومات الفندق</string>
+    <string name="subtitle_discover">اكتشف خدماتنا والمناطق المحيطة بنا.</string>
+    <string name="label_facilities">المرافق</string>
+    <string name="label_wifi">معلومات الواي فاي</string>
+    <string name="label_dining_hours">ساعات الطعام</string>
+    <string name="label_local_guide">الدليل المحلي</string>
+    <string name="label_safety">معلومات السلامة</string>
+    <string name="label_checkout">معلومات المغادرة</string>
+    <string name="navigation_hint">استخدم مفاتيح الأسهم للتنقل، واضغط موافق للاختيار.</string>
+</resources>
