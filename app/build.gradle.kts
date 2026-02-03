@@ -34,6 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
 }
 
 dependencies {
@@ -52,10 +53,22 @@ dependencies {
 //    implementation("androidx.media3:media3-ui:1.2.1")
 //    implementation("androidx.media3:media3-exoplayer-dash:1.2.1")
 
-// Correct Media3 1.4.1 dependencies
-    implementation("androidx.media3:media3-exoplayer:1.4.1")
-    implementation("androidx.media3:media3-exoplayer-dash:1.4.1")
-// Required for .mpd files
-    implementation("androidx.media3:media3-ui:1.4.1")
-    implementation("androidx.media3:media3-common:1.4.1")
+    // Correct Media3 1.4.1 dependencies
+//    implementation("androidx.media3:media3-exoplayer:1.4.1")
+//    implementation("androidx.media3:media3-exoplayer-dash:1.4.1")
+//    implementation("androidx.media3:media3-datasource:1.4.1")
+//    implementation("androidx.media3:media3-exoplayer-rtsp:1.4.1")
+//    implementation("com.github.K0ntrv:media3-ffmpeg:1.4.1")
+
+    //implementation("org.jellyfin.media3:media3-ffmpeg-decoder:1.4.1")
+    // ✅ Media3 1.4.1 Core
+    val media3Version = "1.4.1"
+    implementation("androidx.media3:media3-exoplayer:$media3Version")
+    implementation("androidx.media3:media3-ui:$media3Version")
+    implementation("androidx.media3:media3-common:$media3Version")
+    implementation("androidx.media3:media3-datasource:$media3Version")
+    implementation("androidx.media3:media3-exoplayer-rtsp:$media3Version")
+
+    implementation("org.videolan.android:libvlc-all:3.5.1")
+
 }

@@ -4,6 +4,7 @@ import java.io.Serializable
 
 /**
  * Movie class represents video entity with title, description, image thumbs and video url.
+ * It acts as a container to hold all the details about a single movie.
  */
 data class Movie(
     var id: Long = 0,

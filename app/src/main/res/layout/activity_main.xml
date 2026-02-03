@@ -42,13 +42,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="#88FFFFFF"
-            android:textSize="20sp" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="Mon 05 Jan 2026" />
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:text="17:01" />
+        <!--            android:textStyle="bold"-->
+
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/dateText"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="8dp"-->
+        <!--            android:textColor="#88FFFFFF"-->
+        <!--            android:textSize="20sp" />-->
     </LinearLayout>
 
     <FrameLayout
-        android:id="@+id/btnLiveTv"
-        android:layout_width="480dp"
+        android:id="@+id/btnHotelAd"
+        android:layout_width="450dp"
         android:layout_height="340dp"
         android:focusable="true"
         android:clickable="true"
@@ -98,9 +118,9 @@
         android:useDefaultMargins="true"
         android:alignmentMode="alignMargins"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btnLiveTv"
-        app:layout_constraintBottom_toBottomOf="@id/btnLiveTv"
-        app:layout_constraintStart_toEndOf="@id/btnLiveTv">
+        app:layout_constraintTop_toTopOf="@id/btnHotelAd"
+        app:layout_constraintBottom_toBottomOf="@id/btnHotelAd"
+        app:layout_constraintStart_toEndOf="@id/btnHotelAd">
 
         <include layout="@layout/item_small_tile" android:id="@+id/btnTvGuide"
             android:layout_width="120dp" android:layout_height="110dp" />

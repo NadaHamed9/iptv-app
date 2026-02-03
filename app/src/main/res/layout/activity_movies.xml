@@ -20,14 +20,63 @@
         android:src="@drawable/ic_back"
         android:focusable="true"
         android:clickable="true"
+        android:contentDescription="@string/back_button_desc"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/search_background"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.32"> <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_search"
+        android:contentDescription="@null"
+        app:tint="#00E5FF" />
+
+        <EditText
+            android:id="@+id/etSearchMovies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:hint="@string/search_hint"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#E6FFFFFF" android:textSize="18sp"
+            android:minHeight="48dp"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:focusable="true"/> </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_results"
+        android:textColor="#B3FFFFFF"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchContainer" />
 
     <TextView
         android:id="@+id/titleMovies"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MOVIES"
+        android:text="@string/movies_title"
         android:textColor="#00E5FF"
         android:textSize="48sp"
         android:textStyle="bold"

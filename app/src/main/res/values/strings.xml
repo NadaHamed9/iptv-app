@@ -51,7 +51,27 @@
     <string name="label_dining_hours">Dining Hours</string>
     <string name="label_local_guide">Local Guide</string>
     <string name="label_safety">Safety Info</string>
+
+    <string name="title_concierge">CONCIERGE SERVICES</string>
+    <string name="subtitle_concierge">How can we assist you today?</string>
     <string name="label_checkout">Checkout Info</string>
     <string name="navigation_hint">Use arrow keys to navigate, OK to select.</string>
+    <string name="check_out">Check-Out</string>
+    <string name="wake_up_call">Wake-up Call</string>
+    <string name="transportation">Transportation</string>
+    <string name="luggage_help">Luggage Help</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="call_front_desk">Call Front Desk</string>
 
+    <string name="salon">Salon</string>
+    <string name="facial">Facial</string>
+    <string name="massage">Massage</string>
+    <string name="title_spa"><![CDATA[SPA & WELLNESS]]></string>
+    <string name="subtitle_spa">Select a Treatment</string>
+    <string name="gym">GYM</string>
+
+    <string name="back_button_desc">Back to Dashboard</string>
+    <string name="search_hint">Search movies by name...</string>
+    <string name="no_results">No movies match your search</string>
+    <string name="movies_title">MOVIES</string>
 </resources>

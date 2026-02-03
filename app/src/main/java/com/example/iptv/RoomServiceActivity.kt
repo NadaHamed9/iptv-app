@@ -9,7 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 
-// Change from FragmentActivity() to BaseActivity()
+
 class RoomServiceActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

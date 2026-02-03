@@ -35,9 +35,6 @@ class HotelInfoActivity : BaseActivity() {
         textView?.text = label
         imageView?.setImageResource(iconRes)
 
-        // Focus listener removed to match RoomService code.
-        // The "Glow" is handled by the XML background selector.
-
         container.setOnClickListener {
             Toast.makeText(this, "Opening $label...", Toast.LENGTH_SHORT).show()
         }

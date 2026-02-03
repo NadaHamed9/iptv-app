@@ -40,4 +40,24 @@
     <string name="label_safety">معلومات السلامة</string>
     <string name="label_checkout">معلومات المغادرة</string>
     <string name="navigation_hint">استخدم مفاتيح الأسهم للتنقل، واضغط موافق للاختيار.</string>
+
+    <string name="title_concierge">خدمات الكونسيرج</string>
+    <string name="subtitle_concierge">كيف يمكننا مساعدتك اليوم؟</string>
+    <string name="check_out">تسجيل خروج</string>
+    <string name="wake_up_call">خدمة الإيقاظ</string>
+    <string name="transportation">وسائل النقل</string>
+    <string name="luggage_help">المساعدة في الأمتعة</string>
+    <string name="maintenance">الصيانة</string>
+    <string name="call_front_desk">الاتصال بالاستقبال</string>
+
+    <string name="title_spa">السبا واللياقة</string>
+    <string name="subtitle_spa">اختر علاجاً</string>
+    <string name="massage">مساج</string>
+    <string name="facial">تنظيف بشرة</string>
+    <string name="salon">الصالون</string>
+
+    <string name="back_button_desc">الرجوع للرئيسية</string>
+    <string name="search_hint">ابحث عن الأفلام بالاسم...</string>
+    <string name="no_results">لا توجد أفلام تطابق بحثك</string>
+    <string name="movies_title">الأفلام</string>
 </resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical"> <ImageView
+    android:id="@+id/channelIcon"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:src="@drawable/ic_tv"
+    android:tint="#00E5FF"
+    android:layout_marginEnd="16dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/channelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Channel Name" />
+
+        <TextView
+            android:id="@+id/channelUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#88FFFFFF"
+            android:textSize="14sp"
+            android:text="udp://@239.0.0.1:5000"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_movie"
+        android:tint="#FFFFFF"
+        android:alpha="0.5" />
+
+</LinearLayout>

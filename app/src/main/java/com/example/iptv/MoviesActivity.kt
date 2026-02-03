@@ -1,84 +1,85 @@
-package com.example.iptv
-
-import android.content.Intent
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.os.Bundle
-import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-
-class MoviesActivity : BaseActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_movies)
-
-        setupBackButton()
-
-        // Pass posters here
-        setupMovieTile(R.id.movie1, "Avatar Fire And Ash", "http://10.10.10.115:8081/hls/movie2.mp4/manifest.mpd", R.drawable.poster_avatar_fire_and_ash)
-        setupMovieTile(R.id.movie2, "The Odyssey", "http://10.10.10.115:8081/hls/movie3.mp4/manifest.mpd", R.drawable.poster_the_odessey)
-        setupMovieTile(R.id.movie3, "A House Of Dynamite", "http://10.10.10.115:8081/hls/movie4.mp4/manifest.mpd", R.drawable.poster_a_house_of_dynamite)
-    }
-
-    private fun setupMovieTile(viewId: Int, title: String, videoUrl: String, imageRes: Int) {
-        val container = findViewById<View>(viewId) ?: return
-
-        val label = container.findViewById<TextView>(R.id.movieTitle)
-        val poster = container.findViewById<ImageView>(R.id.moviePoster)
-
-        label.text = title
-        poster.setImageResource(imageRes)
-
-        // 1. Handle Click (Launch Video)
-        container.setOnClickListener {
-            val intent = Intent(this, VideoPlayerActivity::class.java)
-            intent.putExtra("VIDEO_URL", videoUrl)
-            startActivity(intent)
-        }
-
-        // 2. Handle Focus (Zoom and Glow Effect)
-        container.setOnFocusChangeListener { view, hasFocus ->
-            if (hasFocus) {
-                // Zoom in effect
-                view.animate().scaleX(1.1f).scaleY(1.1f).setDuration(200).start()
-
-                // Increase elevation to bring it to the front
-                view.elevation = 20f
-
-                // If you have a background selector, this triggers the cyan border
-                view.isActivated = true
-            } else {
-                // Zoom back to normal
-                view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(200).start()
-
-                // Return to normal elevation
-                view.elevation = 8f
-
-                view.isActivated = false
-            }
-        }
-    }
-    private fun setupBackButton() {
-        val backBtn = findViewById<ImageView>(R.id.btnBack) ?: return
-        backBtn.imageTintList = ColorStateList.valueOf(Color.WHITE)
-        backBtn.setOnClickListener { finish() }
-
-        backBtn.setOnFocusChangeListener { view, hasFocus ->
-            val imageView = view as ImageView
-            if (hasFocus) {
-                imageView.imageTintList = ColorStateList.valueOf(Color.parseColor("#00E5FF"))
-                imageView.scaleX = 1.15f
-                imageView.scaleY = 1.15f
-            } else {
-                imageView.imageTintList = ColorStateList.valueOf(Color.WHITE)
-                imageView.scaleX = 1.0f
-                imageView.scaleY = 1.0f
-            }
-        }
-    }
-}
+/************** worked version ************************/
+//package com.example.iptv
+//
+//import android.content.Intent
+//import android.content.res.ColorStateList
+//import android.graphics.Color
+//import android.os.Bundle
+//import android.view.View
+//import android.widget.ImageView
+//import android.widget.TextView
+//
+//class MoviesActivity : BaseActivity() {
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_movies)
+//
+//        setupBackButton()
+//
+//        // Pass posters here
+//        setupMovieTile(R.id.movie1, "Avatar Fire And Ash", "http://10.10.11.47:8081/abr/movie2/movie2.smil/manifest.mpd", R.drawable.poster_avatar_fire_and_ash)
+//        setupMovieTile(R.id.movie2, "The Odyssey", "http://10.10.11.47:8081/abr/movie3/movie3.smil/manifest.mpd", R.drawable.poster_the_odessey)
+//        setupMovieTile(R.id.movie3, "A House Of Dynamite", "http://10.10.11.47:8081/abr/movie1/movie1.smil/manifest.mpd", R.drawable.poster_a_house_of_dynamite)
+//    }
+//
+//    private fun setupMovieTile(viewId: Int, title: String, videoUrl: String, imageRes: Int) {
+//        val container = findViewById<View>(viewId) ?: return
+//
+//        val label = container.findViewById<TextView>(R.id.movieTitle)
+//        val poster = container.findViewById<ImageView>(R.id.moviePoster)
+//
+//        label.text = title
+//        poster.setImageResource(imageRes)
+//
+//        // 1. Handle Click (Launch Video)
+//        container.setOnClickListener {
+//            val intent = Intent(this, VideoPlayerActivity::class.java)
+//            intent.putExtra("VIDEO_URL", videoUrl)
+//            startActivity(intent)
+//        }
+//
+//        // 2. Handle Focus (Zoom and Glow Effect)
+//        container.setOnFocusChangeListener { view, hasFocus ->
+//            if (hasFocus) {
+//                // Zoom in effect
+//                view.animate().scaleX(1.1f).scaleY(1.1f).setDuration(200).start()
+//
+//                // Increase elevation to bring it to the front
+//                view.elevation = 20f
+//
+//                // If you have a background selector, this triggers the cyan border
+//                view.isActivated = true
+//            } else {
+//                // Zoom back to normal
+//                view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(200).start()
+//
+//                // Return to normal elevation
+//                view.elevation = 8f
+//
+//                view.isActivated = false
+//            }
+//        }
+//    }
+//    private fun setupBackButton() {
+//        val backBtn = findViewById<ImageView>(R.id.btnBack) ?: return
+//        backBtn.imageTintList = ColorStateList.valueOf(Color.WHITE)
+//        backBtn.setOnClickListener { finish() }
+//
+//        backBtn.setOnFocusChangeListener { view, hasFocus ->
+//            val imageView = view as ImageView
+//            if (hasFocus) {
+//                imageView.imageTintList = ColorStateList.valueOf(Color.parseColor("#00E5FF"))
+//                imageView.scaleX = 1.15f
+//                imageView.scaleY = 1.15f
+//            } else {
+//                imageView.imageTintList = ColorStateList.valueOf(Color.WHITE)
+//                imageView.scaleX = 1.0f
+//                imageView.scaleY = 1.0f
+//            }
+//        }
+//    }
+//}
 
 /*******************/
 
@@ -181,3 +182,137 @@ class MoviesActivity : BaseActivity() {
 //        }
 //    }
 //}
+
+
+package com.example.iptv
+
+import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.View
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.TextView
+
+class MoviesActivity : BaseActivity() {
+
+    // Data class to keep track of movie info and its specific layout container
+    private data class MovieItem(
+        val viewId: Int,
+        val title: String,
+        val videoUrl: String,
+        val imageRes: Int
+    )
+
+    private val movieList = mutableListOf<MovieItem>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_movies)
+
+        setupBackButton()
+
+        // 1. Initialize movie data
+        movieList.add(MovieItem(R.id.movie1, "Avatar Fire And Ash", "http://10.10.11.47:8081/abr/movie2/movie2.smil/manifest.mpd", R.drawable.poster_avatar_fire_and_ash))
+        movieList.add(MovieItem(R.id.movie2, "The Odyssey", "http://10.10.11.47:8081/abr/movie3/movie3.smil/manifest.mpd", R.drawable.poster_the_odessey))
+        movieList.add(MovieItem(R.id.movie3, "A House Of Dynamite", "http://10.10.11.47:8081/abr/movie1/movie1.smil/manifest.mpd", R.drawable.poster_a_house_of_dynamite))
+
+        // 2. Setup each tile
+        for (movie in movieList) {
+            setupMovieTile(movie.viewId, movie.title, movie.videoUrl, movie.imageRes)
+        }
+
+        // 3. Setup Search Logic
+        setupSearch()
+    }
+
+    private fun setupSearch() {
+        val etSearch = findViewById<EditText>(R.id.etSearchMovies) ?: return
+
+        etSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val query = s.toString().trim()
+                filterMovies(query)
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
+    }
+
+    private fun filterMovies(query: String) {
+        var matchCount = 0
+        val tvNoResults = findViewById<TextView>(R.id.tvNoResults)
+
+        for (movie in movieList) {
+            val container = findViewById<View>(movie.viewId) ?: continue
+
+            if (movie.title.contains(query, ignoreCase = true)) {
+                container.visibility = View.VISIBLE
+                matchCount++
+            } else {
+                container.visibility = View.GONE
+            }
+        }
+
+        // Show or hide the "No results" message based on the count
+        if (matchCount == 0) {
+            tvNoResults?.visibility = View.VISIBLE
+        } else {
+            tvNoResults?.visibility = View.GONE
+        }
+    }
+
+    private fun setupMovieTile(viewId: Int, title: String, videoUrl: String, imageRes: Int) {
+        val container = findViewById<View>(viewId) ?: return
+
+        val label = container.findViewById<TextView>(R.id.movieTitle)
+        val poster = container.findViewById<ImageView>(R.id.moviePoster)
+
+        label.text = title
+        poster.setImageResource(imageRes)
+
+        // Handle Click (Launch Video)
+        container.setOnClickListener {
+            val intent = Intent(this, VideoPlayerActivity::class.java)
+            intent.putExtra("VIDEO_URL", videoUrl)
+            startActivity(intent)
+        }
+
+        // Handle Focus (Zoom and Glow Effect)
+        container.setOnFocusChangeListener { view, hasFocus ->
+            if (hasFocus) {
+                view.animate().scaleX(1.1f).scaleY(1.1f).setDuration(200).start()
+                view.elevation = 20f
+                view.isActivated = true // Triggers selector background
+            } else {
+                view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(200).start()
+                view.elevation = 8f
+                view.isActivated = false
+            }
+        }
+    }
+
+    private fun setupBackButton() {
+        val backBtn = findViewById<ImageView>(R.id.btnBack) ?: return
+        backBtn.imageTintList = ColorStateList.valueOf(Color.WHITE)
+        backBtn.setOnClickListener { finish() }
+
+        backBtn.setOnFocusChangeListener { view, hasFocus ->
+            val imageView = view as ImageView
+            if (hasFocus) {
+                imageView.imageTintList = ColorStateList.valueOf(Color.parseColor("#00E5FF"))
+                imageView.scaleX = 1.15f
+                imageView.scaleY = 1.15f
+            } else {
+                imageView.imageTintList = ColorStateList.valueOf(Color.WHITE)
+                imageView.scaleX = 1.0f
+                imageView.scaleY = 1.0f
+            }
+        }
+    }
+}

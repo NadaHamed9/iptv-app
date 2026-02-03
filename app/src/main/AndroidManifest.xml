@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
 
     <uses-feature
         android:name="android.hardware.touchscreen"
@@ -40,6 +43,12 @@
         <activity
             android:name=".SettingsActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".SpaActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <activity
             android:name=".DetailsActivity"
             android:exported="false" />
@@ -60,11 +69,22 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".VideoPlayerActivity"
+            android:name=".ConciergeActivity"
             android:exported="false"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|screenSize|keyboardHidden|layoutDirection" />
+            android:screenOrientation="landscape" />
 
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+
+        <activity
+            android:name=".LivePlayerActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:exported="false">
+        </activity>
 
 
     </application>
